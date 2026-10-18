@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice7</title>
+</head>
+
+    <body>
+        <form method="get" action="" id="myForm">
+            <p>
+                <label for="zone Saisie"> Entrez une valeur : </label>
+                <input type="text" id="zone Saisie" name="zone Saisie" />
+            </p>
+            <p>
+                <input type="button" value="ok" id="ok" onclick="calculerValeurAbsolue()"/>
+            </p>
+            <p>
+                <label for="zone Resultat"> Resultat : </label>
+                <input type="text" id="zone Resultat" name="zone Resultat" />
+            </p>
+        </form>
+        <script>
+            var zoneResultat = document.getElementById('zone Resultat');
+            zoneResultat.readOnly = true;
+            function calculerValeurAbsolue() {
+                var zoneSaisie = document.getElementById("zone Saisie");
+                if (zoneSaisie.value == "" || isNaN(zoneSaisie.value))
+                    alert("Votre saisie est incorrecte ");
+                else
+                    zoneResultat.value = Math.abs(zoneSaisie.value);/*The Math.abs() static method returns the absolute value of a number.*/
+                    zoneResultat.readOnly = true ;
+                }
+        </script>
+    </body>
+
+</html>

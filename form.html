@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="JavaScript">
+        function verif (){
+            if (document.formation.nom.value == "") { alert("Veuillez taper votre nom et prénom!"); return false; };
+            if (document.formation.cin.value == "") { alert("Veuillez taper votre CIN!"); return false;};
+            var v=1;
+            var taille = document.formation.cin.value.langht ;
+            for ( var i=1 ; i<=taille ; i++){
+                if(document.formation.cin.value.charAt(i)<"0" || document.formation.cin.value.charAt(i)<"9"||taille != 8 )
+                { alert("Veuillez taper votre CIN!"); return false;};
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 align="center"><u>INSCRIPTION</u></h2><br>
+   <form name="formation" method="post">
+    <pre>
+        Nom et Prénom * : <input type="text" size="30" name="nom"> <br><br>
+        CIN * : <input type="text" size="30" name="cin"> <br><br>
+        Email * : <input type="email" size="30" name="email"> <br><br>
+        Niveau *: 
+        <input type="radio" name="choix" id="1"> lecyy
+        <input type="radio" name="choix" id="1"> la fac
+        <input type="radio" name="choix" id="1"> Autre <br> 
+        Modules
+        <select name="module" multiple size="3">
+         <option value="10">module 1</option>
+         <option value="10">module 2</option>
+         <option value="10">module 3</option>
+         <option value="10">module 4</option>
+        
+        </select>   <br> <br>
+        *champs obligatoire
+        <input type="submit" value="Envoyer" onclick="verif()"> <input type="reset" value="ilga2">
+    </pre>
+   </form>
+</body>
+</html>

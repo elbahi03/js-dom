@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripts JavaScript</title>
+    <script>
+        // Fonction pour afficher les nombres de 20 à 0 avec un pas de 2
+        function afficherNombres() {
+            let resultat = "";
+            for (let i = 20; i >= 0; i -= 2) {
+                resultat += i + " "; // Ajouter chaque nombre à la chaîne
+            }
+            alert("Les nombres de 20 à 0 avec un pas de 2 sont :  " + resultat );
+        }
+
+        // Fonction pour demander trois variables et tester leur égalité
+        function testerVariables() {
+            // Demander trois variables 
+            let var1 = prompt("Entrez la première variable :");
+            let var2 = prompt("Entrez la deuxième variable :");
+            let var3 = prompt("Entrez la troisième variable :");
+            if ( isNaN(var1) || isNaN(var2) || isNaN(var3)){
+                alert("taper nombres anami ");
+            } else {
+            // Comparer les variables
+            if (var1 === var2 && var2 === var3) {
+                alert("Les trois variables sont identiques.");
+            } else if (var1 === var2 || var1 === var3 || var2 === var3) {
+                alert("Deux des variables sont de valeurs égales.");
+            } else {
+                alert("Les trois variables sont différentes.");
+            } }
+        }
+    </script>
+</head>
+<body>
+    <h1>Scripts JavaScript</h1>
+    <button onclick="afficherNombres()">Afficher les nombres de 20 à 0</button>
+    <button onclick="testerVariables()">Tester trois variables</button>
+</body>
+</html>

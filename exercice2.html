@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>CARRE</title>
+    <script language="JavaScript">
+        function carre() {
+            var c = document.getElementById("nb");
+            let carre2 = Math.pow(c.value,2);
+            let carre1 = c.value * c.value;
+            alert("Le carré de " + c.value + " est " + carre2); 
+        }
+        
+    </script>
+</head>
+
+<body>
+    <INPUT type="text" name="nbr" id="nb" size="4">
+        <INPUT type="button" value="Calculer le carré" onclick="carre()">
+
+       
+</body>
+
+</html>
